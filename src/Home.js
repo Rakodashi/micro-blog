@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import LogList from "./assets/LogList";
+import LogList from "./LogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
