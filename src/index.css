@@ -61,3 +61,11 @@
   font-weight: 400;
   color: #cc99cc;
 }
+.loading {
+  color: #ffcc66;
+  font-size: 2rem;
+}
+.error{
+  color: #ff3300;
+  font-size: 2rem;
+}

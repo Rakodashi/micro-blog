@@ -1,30 +1,16 @@
 import { useEffect, useState } from "react";
 import LogList from "./assets/LogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
-  const [logs, setLogs] = useState(null);
-
-  const [name, setName] = useState('Data');
-
-  const handleDelete = (id) => {
-    const newLogs = logs.filter(log => log.id !== id);
-    setLogs(newLogs);
-  }
-
-  useEffect(() => {
-    fetch('http://localhost:8000/logs')
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        setLogs(data);
-      })
-  }, []);
+  const { data: logs, isPending, error } = useFetch('http://localhost:8000/logs');
 
   return (
     <div className="home">
-      {logs && <LogList logs={logs} handleDelete={handleDelete} title="All Logs" />}
-      {logs && <LogList logs={logs.filter((log) => log.author === 'Capt. Janeway')} title="Delta Quadrant" handleDelete={handleDelete} />}
+      { error && <div className="error">{ error }</div> }
+      { isPending && <div className="loading">Loading...</div>}
+      {logs && <LogList logs={logs} title="All Logs" />}
+      {logs && <LogList logs={logs.filter((log) => log.author === 'Capt. Janeway')} title="Delta Quadrant" />}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-const LogList = ({ logs, title, handleDelete }) => {
+const LogList = ({ logs, title }) => {
 
   return ( 
     <div className="log-list">
@@ -8,7 +8,6 @@ const LogList = ({ logs, title, handleDelete }) => {
           <h2> {log.title} </h2>
           <h3>Stardate {log.stardate} </h3>
           <h3>Written by {log.author} </h3>
-          <button className="button" onClick={() => handleDelete(log.id)}>Delete</button>
         </div>
       ))}
     </div>
