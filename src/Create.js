@@ -12,6 +12,7 @@ const Create = () => {
   const handleSubmit = (e)=> {
     e.preventDefault();
     const log = { title, stardate, body, author};
+    
 
     setIsPending(true);
 

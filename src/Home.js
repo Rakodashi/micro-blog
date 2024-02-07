@@ -9,7 +9,7 @@ const Home = () => {
       { error && <div className="error">{ error }</div> }
       { isPending && <div className="loading">Loading...</div>}
       {logs && <LogList logs={logs} title="All Logs" />}
-      {logs && <LogList logs={logs.filter((log) => log.author === 'Capt. Janeway')} title="Delta Quadrant" />}
+      {logs && <LogList logs={logs.filter((log) => log.author === "Adm. Janeway")} title="Delta Quadrant" />}
     </div>
   );
 }
