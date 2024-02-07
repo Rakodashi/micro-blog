@@ -1,15 +1,35 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Create = () => {
   const [title, setTitle] = useState('');
   const [stardate, setStardate] = useState('');
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('Adm. Picard');
+  const [isPending, setIsPending] = useState(false);
+  const history = useHistory();
+
+  const handleSubmit = (e)=> {
+    e.preventDefault();
+    const log = { title, stardate, body, author};
+
+    setIsPending(true);
+
+    fetch('http://localhost:8000/logs', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(log)
+    }).then(() => {
+      console.log('new log added');
+      setIsPending(false);
+      history.push('/');
+    })   
+  }
 
   return ( 
     <div className="create">
       <h2>Add a new Log</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Log Title:</label>
         <input 
         type="text"
@@ -44,11 +64,8 @@ const Create = () => {
           <option value="Adm. Janeway">Adm. Janeway</option>
         </select>
 
-        <button>Add Log</button>
-        <p>{ title }</p>
-        <p>{ stardate }</p>
-        <p>{ body }</p>
-        <p>{ author }</p>
+        { !isPending && <button>Add Log</button> }
+        { isPending && <button disabled>Adding Log...</button> }
       </form>
     </div>
    );
