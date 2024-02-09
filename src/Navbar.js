@@ -6,8 +6,8 @@ const Navbar = () => {
       {/* <img src="./assets/trek-logo-2.png" alt="" /> */}
       <h1>The Micro Blog</h1>
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/create">New Log</Link>
+        <Link to="/">HOME</Link>
+        <Link to="/create">NEW LOG</Link>
       </div>
     </nav>
   );

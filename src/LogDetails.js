@@ -23,10 +23,10 @@ const LogDetails = () => {
         <article>
           <h2>{ log.title }</h2>
           <h3>Stardate { log.stardate }</h3>
-          <h3>Written by { log.author }</h3>
+          <h3>Author: { log.author }</h3>
           <div>{ log.body }</div>
 
-          <button onClick={handleClick} className='button'>delete</button>
+          <button onClick={handleClick} className='button'>DELETE</button>
         </article>
       )}
     </div>

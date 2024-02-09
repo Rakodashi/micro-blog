@@ -31,6 +31,7 @@ const Create = () => {
     <div className="create">
       <h2>Add a new Log</h2>
       <form onSubmit={handleSubmit}>
+        
         <label>Log Title:</label>
         <input 
         type="text"
@@ -46,6 +47,7 @@ const Create = () => {
         value={stardate}
         onChange={(e) => setStardate(e.target.value)}
          />
+
         <label>Log Body:</label>
         <textarea
         required
@@ -65,7 +67,7 @@ const Create = () => {
           <option value="Adm. Janeway">Adm. Janeway</option>
         </select>
 
-        { !isPending && <button>Add Log</button> }
+        { !isPending && <button>ADD LOG</button> }
         { isPending && <button disabled>Adding Log...</button> }
       </form>
     </div>

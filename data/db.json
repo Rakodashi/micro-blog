@@ -1,31 +1,52 @@
 {
   "logs": [
     {
-      "title": "Jean-Luc Picard",
-      "stardate": "20242.2",
-      "body": "Jean-Luc Picard was a celebrated Starfleet officer, archaeologist, writer, historian, diplomat, and philanthropist, who served throughout much of the 24th century. The highlights of his career were centered around assignments as commanding officer of the Federation starships USS Stargazer, USS Enterprise-D, and the USS Enterprise-E. In these roles, Picard not only witnessed major turning points of recent galactic history, but played a key role in them also, from making first contact as captain of the Federations flagship with no fewer than 27 alien species, including the Ferengi and the Borg. His successful contact with the Children of Tama resulted in his name being incorporated into the Tamarian language through the metaphor 'Picard and Dathon at El-Adrel'.",
-      "author": "Cdre. La Forge",
-      "id": "2"
-    },
-    {
-      "title": "Deanna Troi",
-      "stardate": "20242.4",
-      "body": "Deanna Troi was a female Betazoid-Human hybrid Starfleet officer. Under the command of Captain Jean-Luc Picard, she served as the counselor aboard the USS Enterprise-D and the USS Enterprise-E. In 2379, Troi transferred to the USS Titan (Star Trek: The Next Generation; Star Trek Nemesis). By 2399, she and her husband William T. Riker lived on the planet Nepenthe with their daughter, Kestra Troi-Riker. Their son, Thaddeus Troi-Riker, died of Mendaxic neurosclerosis soon after their arrival on Nepenthe.",
-      "author": "Cdre. La Forge",
-      "id": "1"
-    },
-    {
       "id": "9688",
       "title": "Seven of Nine",
-      "stardate": "202402.6",
+      "stardate": "20242.6",
       "body": "Seven of Nine, born Annika Hansen, was a Human female who lived during the latter half of the 24th century into the early 25th century.\n\nAssimilated by the Borg at the age of six and redesignated Seven of Nine, Tertiary Adjunct of Unimatrix 01. Twenty-four years later, Seven, as she was later known, was liberated from life as a Borg drone by the crew of the USS Voyager and joined the crew under Captain Janeway's mentorship. She was critical in assisting the crew's return to the Alpha Quadrant in 2378.\n\nSeven was initially rejected by Starfleet for her Borg past, and chose instead to join the Fenris Rangers, helping instill justice in lawless and dangerous regions. Instrumental in the forging of a truce with a new Borg faction, she was given a field commission by Admiral Picard and joined Starfleet as a commander and first officer of the USS Titan-A. Following the destruction of the Borg, Seven was promoted to the rank of captain and given command of the USS Enterprise-G. ",
       "author": "Adm. Janeway"
     },
     {
       "id": "03f7",
       "title": "USS Voyager",
-      "stardate": "202402.6",
+      "stardate": "20242.6",
       "body": "The USS Voyager (NCC-74656) was a 24th century Federation Intrepid-class starship operated by Starfleet from 2371 to 2378.\n\nOne of the most storied starships in the history of Starfleet, Voyager was famous for completing an unscheduled seven-year journey across the Delta Quadrant, the first successful exploration of that quadrant by the Federation, as well as numerous technological innovations and first contacts.\n\nIt was the first ship in a long line to bear the name Voyager with this registry. ",
+      "author": "Adm. Janeway"
+    },
+    {
+      "id": "47cb",
+      "title": "Jean-Luc Picard",
+      "stardate": "20242.2",
+      "body": "Jean-Luc Picard was a celebrated Starfleet officer, archaeologist, writer, historian, diplomat, and philanthropist, who served throughout much of the 24th century. The highlights of his career were centered around assignments as commanding officer of the Federation starships USS Stargazer, USS Enterprise-D, and the USS Enterprise-E. In these roles, Picard not only witnessed major turning points of recent galactic history, but played a key role in them also, from making first contact as captain of the Federation's flagship with no fewer than 27 alien species, including the Ferengi and the Borg. His successful contact with the Children of Tama resulted in his name being incorporated into the Tamarian language through the metaphor \"Picard and Dathon at El-Adrel\".\n\nHe also became the chief contact point with the Q Continuum, and served as Arbiter of Succession of the Klingon Empire, where he presided over the investiture of Klingon Chancellor Gowron. Picard would expose the Romulan Star Empire as backers of Gowron's chief rivals, later aiding a Romulan underground movement of dissidents to gain a toehold on the Romulan homeworld. He continued to serve as captain of the Enterprise-E, the sixth Federation starship to bear the name, until at least the early 2380s. (TNG: \"The Battle\", \"The Last Outpost\", \"Q Who\", \"Darmok\", \"Encounter at Farpoint\", and more, \"Redemption\", \"Redemption II\", \"Unification II\"; Star Trek: First Contact; Star Trek Nemesis; PIC: \"Remembrance\")\n\nFollowing his command of the Enterprise-E, he rose to the rank of admiral, he resigned from Starfleet for a time, after he felt that the organization had strayed from its ideals, before eventually rejoining as the Chancellor of Starfleet Academy.",
+      "author": "Cdre. La Forge"
+    },
+    {
+      "id": "d390",
+      "title": "Deanna Troi",
+      "stardate": "20242.4",
+      "body": "Deanna Troi was a female Betazoid–Human hybrid Starfleet officer. Under the command of Captain Jean-Luc Picard, she served as the counselor aboard the USS Enterprise-D and the USS Enterprise-E. In 2379, Troi transferred to the USS Titan (Star Trek: The Next Generation; Star Trek Nemesis). By 2399, she and her husband William T. Riker lived on the planet Nepenthe with their daughter, Kestra Troi-Riker. Their son, Thaddeus Troi-Riker, died of Mendaxic neurosclerosis soon after their arrival on Nepenthe. (PIC: \"Nepenthe\")\n\nAs a half-Betazoid, Troi was capable of extra-sensory empathy, but was incapable of reading aliens with brain structures dissimilar to Humans and other Betazoids, such as the Breen and the Ferengi. Like most Betazoids, Troi had telepathic abilities. Due to her half-Human heritage, however, the range of her telepathic abilities was limited compared to full-blooded Betazoids, and she could usually only read the thoughts of other Betazoids, most notably her mother. Troi's empathic skills made her an important asset to the Enterprise-D and her abilities were often particularly useful when dealing with hostile races. Since she could usually determine, through use of her abilities, whether others were lying, she repeatedly proved herself invaluable in many suspenseful situations.",
+      "author": "Adm. Picard"
+    },
+    {
+      "id": "26aa",
+      "title": "USS Enterprise-D",
+      "stardate": "20242.6",
+      "body": "The USS Enterprise (NCC-1701-D) was a Federation Galaxy-class starship operated by Starfleet, and the fifth Federation vessel to bear the name. The Enterprise served from 2363 to 2371 as the Federation flagship, under the command of Captain Jean-Luc Picard. Following the ship's destruction at Veridian III, it was rebuilt as a museum ship, and was briefly brought back into service to counter a Borg threat in 2401. ",
+      "author": "Adm. Picard"
+    },
+    {
+      "id": "03b0",
+      "title": "Benjamin Sisko",
+      "stardate": "20242.9",
+      "body": "Benjamin Lafayette \"Ben\" Sisko was a well-known Human male Starfleet commanding officer who was perhaps best-known for his seven-year assignment aboard starbase Deep Space 9 in the Bajor sector. After discovering the Bajoran wormhole, he became known to the Bajoran people as the Emissary of the Prophets. He played a critical role as a strategist and front line commander in the Dominion War.",
+      "author": "Cdre. La Forge"
+    },
+    {
+      "id": "76f1",
+      "title": "Kathryn Janeway",
+      "stardate": "20242.9",
+      "body": "Admiral Kathryn Janeway was a 24th and early 25th century Starfleet officer. One of the most decorated captains in Starfleet history, she was most noted for commanding the starship USS Voyager during its journey through the Delta Quadrant. Her captaincy of Voyager and its unprecedented journey through the Delta Quadrant became legendary. As the first Federation captain to successfully traverse the Delta Quadrant, she encountered dozens of new planets, and by one Admiral's estimation, made first contact with more civilizations than any captain since James T. Kirk. (VOY: \"Caretaker\", \"Friendship One\", \"Endgame\")\n\nAfter Voyager's return, she served as a vice admiral at Starfleet Command, and later commanded the USS Dauntless on a rescue mission in the Delta Quadrant. While looking for the missing USS Protostar, she helped to stop the Vau N'Akat plot to destroy the Federation. By the time of the Attack on Mars, Janeway had been promoted to Admiral.",
       "author": "Adm. Janeway"
     }
   ]
