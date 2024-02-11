@@ -15,10 +15,6 @@ const LogDetails = () => {
     })
   }
 
-  // const handleProceed = (e) => {
-  //   history.push(generatePath("/logs/:id", { id }));
-  // };
-
   return ( 
     <div className="log-details">
       { isPending && <div>Loading...</div> }
