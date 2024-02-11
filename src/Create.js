@@ -16,7 +16,7 @@ const Create = () => {
 
     setIsPending(true);
 
-    fetch('http://localhost:8000/logs', {
+    fetch('https://fake-api-neon.vercel.app/logs', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(log)
