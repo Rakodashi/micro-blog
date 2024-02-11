@@ -4,16 +4,20 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const LogDetails = () => {
   const { id } = useParams();
-  const { data: log, error, isPending } = useFetch('https://fake-api-neon.vercel.app/logs' + id);
+  const { data: log, error, isPending } = useFetch(`https://fake-api-neon.vercel.app/logs/${id}`);
   const history = useHistory();
 
   const handleClick = () => {
-    fetch('https://fake-api-neon.vercel.app/logs' + log.id, {
+    fetch(`https://fake-api-neon.vercel.app/logs/${id}`, {
       method: 'DELETE'
     }).then(() => {
       history.push('/');
     })
   }
+
+  // const handleProceed = (e) => {
+  //   history.push(generatePath("/logs/:id", { id }));
+  // };
 
   return ( 
     <div className="log-details">
