@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import LogList from "./LogList";
 import useFetch from "./useFetch";
 
@@ -7,7 +8,7 @@ const Home = () => {
   return (
     <div className="home">
       { error && <div className="error">{ error }</div> }
-      { isPending && <div className="loading">Loading...</div>}
+      { isPending && <div className="loading">{t('Loading...')}</div>}
       {logs && <LogList logs={logs} title="All Logs" />}
       {logs && <LogList logs={logs.filter((log) => log.author === "Adm. Janeway")} title="Delta Quadrant" />}
     </div>

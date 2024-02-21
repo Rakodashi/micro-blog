@@ -1,0 +1,16 @@
+{
+  "translation": {
+      "TRANSLATE": "TRANSLATE",
+      "NEW LOG": "NEW LOG",
+      "All Logs": "All Logs",
+      "Delta Quadrant": "Delta Quadrant",
+      "Loading...": "Loading...",
+
+      "Add a new Log": "Add a new Log",
+      "Log Title:": "Log Title:",
+      "Stardate:": "Stardate:",
+      "Log Body:": "Log Body:",
+      "Log Author:": "Log Author:",
+      "CREATE": "CREATE"
+  }
+}

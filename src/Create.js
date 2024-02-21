@@ -1,3 +1,5 @@
+import { t } from "i18next";
+import './lib/i18n';
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -29,10 +31,10 @@ const Create = () => {
 
   return ( 
     <div className="create">
-      <h2>Add a new Log</h2>
+      <h2>{t('Add a new Log')}</h2>
       <form onSubmit={handleSubmit}>
         
-        <label>Log Title:</label>
+        <label>{t('Log Title:')}</label>
         <input 
         type="text"
         required
@@ -40,7 +42,7 @@ const Create = () => {
         onChange={(e) => setTitle(e.target.value)}
          />
 
-        <label>Stardate:</label>
+        <label>{t('Stardate:')}</label>
         <input 
         type="text"
         required
@@ -48,7 +50,7 @@ const Create = () => {
         onChange={(e) => setStardate(e.target.value)}
          />
 
-        <label>Log Body:</label>
+        <label>{t('Log Body:')}</label>
         <textarea
         required
         value={body}
@@ -57,7 +59,7 @@ const Create = () => {
 
         </textarea>
 
-        <label>Log Author:</label>
+        <label>{t('Log Author:')}</label>
         <select
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
@@ -67,7 +69,7 @@ const Create = () => {
           <option value="Adm. Janeway">Adm. Janeway</option>
         </select>
 
-        { !isPending && <button>ADD LOG</button> }
+        { !isPending && <button>{t('CREATE')}</button> }
         { isPending && <button disabled>Adding Log...</button> }
       </form>
     </div>

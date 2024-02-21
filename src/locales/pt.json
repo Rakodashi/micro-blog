@@ -1,0 +1,16 @@
+{
+  "translation": {
+      "TRANSLATE": "TRADUZIR",
+      "NEW LOG": "NOVO LOG",
+      "All Logs": "Todos os Logs",
+      "Delta Quadrant": "Quadrante Delta",
+      "Loading...": "Carregando...",
+
+      "Add a new Log": "Adicionar um novo Log",
+      "Log Title:": "Título do Log:",
+      "Stardate:": "Data Estelar:",
+      "Log Body:": "Corpo do Log:",
+      "Log Author:": "Autor do Log:",
+      "CREATE": "CRIAR"
+  }
+}
