@@ -171,14 +171,15 @@
     padding:  2rem 2rem;
   }
   .log-list .log-title h2 {
-    padding: 0 .2rem;
-    margin: 0 46% 0 2rem;
+    padding: 0 .3rem;
+    margin: 0 44% 0 1.5rem;
   }
 }
 
 @media screen and (min-width: 700px) {
   .log-list .log-title h2 {
-    margin: 0 69% 0 2rem;
+    padding: 0 .5rem;
+    margin: 0 66% 0 1.5rem;
   }
 }
 
@@ -188,7 +189,6 @@
   }
 
   .log-list .log-title h2 {
-    padding: 0 1rem;
-    margin: 0 65% 0 2rem;
+    padding: 0 .5rem;
   }
 }

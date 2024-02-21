@@ -9,8 +9,8 @@ const Home = () => {
     <div className="home">
       { error && <div className="error">{ error }</div> }
       { isPending && <div className="loading">{t('Loading...')}</div>}
-      {logs && <LogList logs={logs} title="All Logs" />}
-      {logs && <LogList logs={logs.filter((log) => log.author === "Adm. Janeway")} title="Delta Quadrant" />}
+      {logs && <LogList logs={logs} title={t('All Logs')} />}
+      {logs && <LogList logs={logs.filter((log) => log.author === "Adm. Janeway")} title={t('Delta Quadrant')} />}
     </div>
   );
 }

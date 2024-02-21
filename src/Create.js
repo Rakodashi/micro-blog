@@ -34,7 +34,7 @@ const Create = () => {
       <h2>{t('Add a new Log')}</h2>
       <form onSubmit={handleSubmit}>
         
-        <label>{t('Log Title:')}</label>
+        <label>{t('Log Title')}</label>
         <input 
         type="text"
         required
@@ -42,7 +42,7 @@ const Create = () => {
         onChange={(e) => setTitle(e.target.value)}
          />
 
-        <label>{t('Stardate:')}</label>
+        <label>{t('Stardate')}</label>
         <input 
         type="text"
         required
@@ -50,7 +50,7 @@ const Create = () => {
         onChange={(e) => setStardate(e.target.value)}
          />
 
-        <label>{t('Log Body:')}</label>
+        <label>{t('Log Body')}</label>
         <textarea
         required
         value={body}
@@ -59,7 +59,7 @@ const Create = () => {
 
         </textarea>
 
-        <label>{t('Log Author:')}</label>
+        <label>{t('Log Author')}</label>
         <select
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
