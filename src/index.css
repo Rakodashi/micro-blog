@@ -81,10 +81,12 @@
 .log-preview h2 {
   color: #9999ff;
   margin-bottom: 8px;
+  overflow-wrap: break-word;
 }
 .log-preview h3 {
   font-weight: 400;
   color: #99ccff;
+  overflow-wrap: break-word;
 }
 .log-preview a {
   text-decoration: none;
@@ -101,32 +103,51 @@
   font-size: 30px;
   color: #9999ff;
   margin-bottom: 10px;
+  /* overflow-y: hidden;
+  overflow-y: scroll; */
+  overflow-wrap: break-word;
 }
 .log-details h3 {
   margin-bottom: 2px;
   color: #99ccff;
+  overflow-wrap: break-word;
 }
 .log-details div {
   font-size: 18px;
   margin: 20px 0;
   white-space: pre-line;
 }
+
+
 .create {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
+.create .create-title {
+  background-color: #9999ff;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+.create .create-title h2 {
+  color: #9999ff;
+  background-color: #000;
+}
+/* .create h2 {
+  font-size: 25px;
+  color: #9999ff;
+  margin-bottom: 30px;
+} */
+
+
 .create label {
   text-align: left;
   display: block;
   font-size: 20px;
   color: #99ccff;
 }
-.create h2 {
-  font-size: 25px;
-  color: #9999ff;
-  margin-bottom: 30px;
-}
+
 .create input, .create textarea, .create select {
   width: 100%;
   padding: 6px 10px;
@@ -174,12 +195,17 @@
     padding: 0 .3rem;
     margin: 0 44% 0 1.5rem;
   }
+
+  .create .create-title h2 {
+    padding: 0 .2rem;
+    margin: 0 24%;
+  }
 }
 
 @media screen and (min-width: 700px) {
   .log-list .log-title h2 {
     padding: 0 .5rem;
-    margin: 0 66% 0 1.5rem;
+    margin: 0 68% 0 1.5rem;
   }
 }
 

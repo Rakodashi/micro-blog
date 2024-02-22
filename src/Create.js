@@ -31,7 +31,9 @@ const Create = () => {
 
   return ( 
     <div className="create">
-      <h2>{t('Add a new Log')}</h2>
+      <div className="create-title">
+        <h2>{t('Add a new Log')}</h2>
+      </div>
       <form onSubmit={handleSubmit}>
         
         <label>{t('Log Title')}</label>

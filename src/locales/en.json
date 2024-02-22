@@ -11,6 +11,7 @@
       "Stardate": "Stardate",
       "Log Body": "Log Body",
       "Log Author": "Log Author",
-      "CREATE": "CREATE"
+      "CREATE": "CREATE",
+      "Author: ": "Author: "
   }
 }

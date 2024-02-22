@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import useFetch from './useFetch';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { t } from 'i18next';
 
 const LogDetails = () => {
   const { id } = useParams();
@@ -22,8 +23,8 @@ const LogDetails = () => {
       { log && (
         <article>
           <h2>{ log.title }</h2>
-          <h3>Stardate { log.stardate }</h3>
-          <h3>Author: { log.author }</h3>
+          <h3>{t('Stardate')} { log.stardate }</h3>
+          <h3>{t('Author: ')} { log.author }</h3>
           <div>{ log.body }</div>
 
           <button onClick={handleClick} className='button'>DELETE</button>
