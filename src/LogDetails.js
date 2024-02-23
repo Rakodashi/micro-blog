@@ -2,11 +2,14 @@ import { useParams } from 'react-router-dom';
 import useFetch from './useFetch';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { t } from 'i18next';
+// import confirm from './assets/'
 
 const LogDetails = () => {
   const { id } = useParams();
   const { data: log, error, isPending } = useFetch(`https://fake-api-neon.vercel.app/logs/${id}`);
   const history = useHistory();
+
+  // const confirm = () => new Audio(confirm).play()
 
   const handleClick = () => {
     fetch(`https://fake-api-neon.vercel.app/logs/${id}`, {
@@ -27,7 +30,7 @@ const LogDetails = () => {
           <h3>{t('Author: ')} { log.author }</h3>
           <div>{ log.body }</div>
 
-          <button onClick={handleClick} className='button'>DELETE</button>
+          <button onClick={handleClick} className='button'>{t('DELETE')}</button>
         </article>
       )}
     </div>

@@ -11,22 +11,38 @@ const Create = () => {
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
 
-  const handleSubmit = (e)=> {
-    e.preventDefault();
-    const log = { title, stardate, body, author};
+  // const handleSubmit = (e)=> {
+  //   e.preventDefault();
+  //   const log = { title, stardate, body, author };
     
+
+  //   setIsPending(true);
+
+  //   fetch('https://fake-api-neon.vercel.app/logs', {
+  //     method: 'POST',
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(log)
+  //   }).then(() => {
+  //     // console.log('new log added');
+  //     setIsPending(false);
+  //     history.push('/');
+  //   })  
+  // }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const log = { title, stardate, body, author };
 
     setIsPending(true);
 
     fetch('https://fake-api-neon.vercel.app/logs', {
       method: 'POST',
+      // method: 'PUT',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(log)
     }).then(() => {
-      console.log('new log added');
       setIsPending(false);
       history.push('/');
-    })   
+    })
   }
 
   return ( 

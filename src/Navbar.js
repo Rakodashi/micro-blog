@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import './lib/i18n';
+import transl from "./assets/translate.mp3";
+import btn from "./assets/button.mp3";
 
 const Navbar = () => {
 
@@ -9,19 +11,23 @@ const Navbar = () => {
 
   const [currentLang, setCurrentLang] = useState(language)
 
+  const translate = () => new Audio(transl).play()
+  const btnBeep = () => new Audio(btn).play()
+
   const handleChangeLanguage = () => {
     const newLanguage = currentLang === 'en' ? 'pt' : 'en'
     changeLanguage(newLanguage)
     setCurrentLang(newLanguage)
+    translate()
   }
 
   return (
     <nav className="navbar">
       <h1>Micro Blog</h1>
       <div className="links">
-        <Link to="/">HOME</Link>
+        <Link to="/" onClick={btnBeep}>HOME</Link>
         <button type='button' onClick={handleChangeLanguage}>{t('TRANSLATE')}</button>
-        <Link to="/create">{t('NEW LOG')}</Link>
+        <Link to="/create" onClick={btnBeep}>{t('NEW LOG')}</Link>
       </div>
     </nav>
   );
