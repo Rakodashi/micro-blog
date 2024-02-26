@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
@@ -12,7 +13,7 @@ const useFetch = (url) => {
       fetch(url, { signal: abortConstant.signal })
         .then(res => {
           if(!res.ok) {
-            throw Error('Could not fetch the data for that resource');
+            throw Error(t('Could not fetch the data for that resource'));
           }
           return res.json();
         })

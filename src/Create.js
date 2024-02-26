@@ -11,23 +11,6 @@ const Create = () => {
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
 
-  // const handleSubmit = (e)=> {
-  //   e.preventDefault();
-  //   const log = { title, stardate, body, author };
-    
-
-  //   setIsPending(true);
-
-  //   fetch('https://fake-api-neon.vercel.app/logs', {
-  //     method: 'POST',
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(log)
-  //   }).then(() => {
-  //     // console.log('new log added');
-  //     setIsPending(false);
-  //     history.push('/');
-  //   })  
-  // }
   const handleSubmit = (e) => {
     e.preventDefault();
     const log = { title, stardate, body, author };
@@ -60,13 +43,31 @@ const Create = () => {
         onChange={(e) => setTitle(e.target.value)}
          />
 
-        <label>{t('Stardate')}</label>
-        <input 
-        type="text"
-        required
-        value={stardate}
-        onChange={(e) => setStardate(e.target.value)}
-         />
+        <span>
+          <span className="span-adjust">
+
+            <label>{t('Stardate')}</label>
+            <input 
+            type="text"
+            required
+            value={stardate}
+            onChange={(e) => setStardate(e.target.value)}
+            />
+          </span>
+
+          <span className="span-adjust">
+            <label>{t('Log Author')}</label>
+            <select
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+            >
+              <option value="Adm. Picard">Adm. Picard</option>
+              <option value="Cdre. La Forge">Cdre. La Forge</option>
+              <option value="Adm. Janeway">Adm. Janeway</option>
+            </select>
+          </span>
+        </span>
+        
 
         <label>{t('Log Body')}</label>
         <textarea
@@ -76,16 +77,6 @@ const Create = () => {
         >
 
         </textarea>
-
-        <label>{t('Log Author')}</label>
-        <select
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-        >
-          <option value="Adm. Picard">Adm. Picard</option>
-          <option value="Cdre. La Forge">Cdre. La Forge</option>
-          <option value="Adm. Janeway">Adm. Janeway</option>
-        </select>
 
         { !isPending && <button>{t('CREATE')}</button> }
         { isPending && <button disabled>Adding Log...</button> }

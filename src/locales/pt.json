@@ -13,6 +13,13 @@
       "Log Author": "Autor do Log",
       "CREATE": "CRIAR",
       "DELETE": "DELETAR",
-      "Author: ": "Autor: "
+      "Author: ": "Autor: ",
+
+      "ERROR": "ERRO",
+      "That page cannot be found": "Essa página não foi encontrada",
+      "Back to the homepage": "Voltar para a página principal",
+
+      "Could not fetch the data for that resource": "Não foi possível buscar os dados desse recurso"
+
   }
 }

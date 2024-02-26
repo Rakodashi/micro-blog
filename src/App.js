@@ -8,6 +8,7 @@ import LogDetails from './LogDetails';
 import NotFound from './NotFound';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import Login from './login';
 
 function App() {
 
@@ -36,6 +37,9 @@ function App() {
           <Route path="/logs/:id">
             <LogDetails />
           </Route>
+          {/* <Route path="/login">
+            <Login />
+          </Route> */}
           <Route path="*">
             <NotFound />
           </Route>

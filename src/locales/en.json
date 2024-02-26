@@ -13,6 +13,12 @@
       "Log Author": "Log Author",
       "CREATE": "CREATE",
       "DELETE": "DELETE",
-      "Author: ": "Author: "
+      "Author: ": "Author: ",
+
+      "ERROR": "ERROR",
+      "That page cannot be found": "That page cannot be found",
+      "Back to the homepage": "Back to the homepage",
+
+      "Could not fetch the data for that resource": "Could not fetch the data for that resource"
   }
 }

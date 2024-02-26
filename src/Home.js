@@ -3,7 +3,7 @@ import LogList from "./LogList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const { data: logs, isPending, error } = useFetch('https://fake-api-neon.vercel.app/logs');
+  const { isPending, error, data: logs } = useFetch('https://fake-api-neon.vercel.app/logs');
 
   return (
     <div className="home">
