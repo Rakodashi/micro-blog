@@ -61,7 +61,6 @@
 .home h2 {
   color: #9999ff;
   font-size: 25px;
-  background-color: #000;
 }
 .button {
   display: flex;
@@ -83,16 +82,19 @@
 }
 .log-list .log-title h2 {
   color: #cc6699;
-  background-color: #000;
 }
 .log-preview {
   padding: 10px 16px;
-  margin: 1rem 0;
-  border-bottom: 1px solid #99ccff;
+  margin: 1rem 1rem;
+  border-left: 5px double #99ccff;
+  border-right: 5px double #99ccff;
+  border-radius: 20px;
 }
 .log-preview:hover,
 .log-preview:active {
   background-color: #373750;
+  border-left: 5px solid #ffcc66;
+  border-right: 5px solid #ffcc66;
   transition: background-color .3s ease-in-out;
 }
 
@@ -112,8 +114,10 @@
   text-decoration: none;
 }
 .loading {
+  display: flex;
+  justify-content: center;
   color: #ffcc66;
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 .error{
   color: #ff3300;
@@ -153,13 +157,7 @@
 }
 .create .create-title h2 {
   color: #9999ff;
-  background-color: #000;
 }
-/* .create h2 {
-  font-size: 25px;
-  color: #9999ff;
-  margin-bottom: 30px;
-} */
 .create span {
   display: flex;
 }
@@ -181,13 +179,13 @@
   width: 100%;
   padding: .4rem 1rem;
   margin: 10px 0;
-  border: 1px solid #99ccff;
+  border: .3rem double #99ccff;
   box-sizing: border-box;
   display: block;
   border-radius: 20px;
 }
 .create input:focus, .create textarea:focus, .create select:focus {
-  border: 1px solid #ffcc66;
+  border: .3rem double #ffcc66;
   outline: none;
 }
 .create textarea {

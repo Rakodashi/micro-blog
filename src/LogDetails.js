@@ -21,7 +21,7 @@ const LogDetails = () => {
 
   return ( 
     <div className="log-details">
-      { isPending && <div>Loading...</div> }
+      { isPending && <div className="loading">{t('Loading...')}</div> }
       { error && <div>{ error }</div> }
       { log && (
         <article>
