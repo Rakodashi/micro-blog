@@ -25,9 +25,14 @@ const LogDetails = () => {
       { error && <div>{ error }</div> }
       { log && (
         <article>
+          <span className='logDetailsSpan'>
           <h2>{ log.title }</h2>
-          <h3>{t('Stardate')} { log.stardate }</h3>
-          <h3>{t('Author: ')} { log.author }</h3>
+          <div className="logImg"></div>
+          </span>
+          <span className='logDetailsSpan'>
+            <h3>{t('Stardate')} { log.stardate }</h3>
+            <h3>{t('Author: ')} { log.author }</h3>
+          </span>
           <div>{ log.body }</div>
 
           <button onClick={handleClick} className='button'>{t('DELETE')}</button>

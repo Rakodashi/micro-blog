@@ -75,7 +75,6 @@ const Create = () => {
         value={body}
         onChange={(e) => setBody(e.target.value)}
         >
-
         </textarea>
 
         { !isPending && <button>{t('CREATE')}</button> }
