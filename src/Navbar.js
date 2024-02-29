@@ -27,6 +27,7 @@ const Navbar = () => {
       <div className="links">
         <Link to="/" onClick={btnBeep}>HOME</Link>
         <button type='button' onClick={handleChangeLanguage}>{t('TRANSLATE')}</button>
+        <Link to="/login" onClick={btnBeep}>{t('LOGIN')}</Link>
         <Link to="/create" onClick={btnBeep}>{t('NEW LOG')}</Link>
       </div>
     </nav>

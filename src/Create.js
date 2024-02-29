@@ -8,12 +8,13 @@ const Create = () => {
   const [stardate, setStardate] = useState('');
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('Adm. Picard');
+  const [url, setUrl] = useState('');
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const log = { title, stardate, body, author };
+    const log = { title, url, stardate, body, author };
 
     setIsPending(true);
 
@@ -42,6 +43,13 @@ const Create = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
          />
+        <label>{t('Log Image')}</label>
+        <input 
+        type="text"
+        required
+        value={url}
+        onChange={(e) => setUrl(e.target.value)}
+         />
 
         <span>
           <span className="span-adjust">
@@ -51,6 +59,7 @@ const Create = () => {
             type="text"
             required
             value={stardate}
+            className="stardateInput"
             onChange={(e) => setStardate(e.target.value)}
             />
           </span>

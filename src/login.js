@@ -1,21 +1,47 @@
-import image from "./assets/trek-logo-2.png"
+import { useReducer, useState } from "react";
+import { useHistory  } from 'react-router-dom';
+import { AuthData } from "./auth/AuthWrapper"
 
 const Login = () => {
-  return ( 
-    <div className="card">
-      <div className="box">
-      {/* <div className="imgBox">
-          <img src={image} alt="" />
-        </div> */}
-      </div>
-      <div className="box"></div>
-      <div className="circle">
-        <div className="imgBox">
-          <img src={image} alt="" />
+
+  const history = useHistory();
+  const { login } = AuthData();
+  const [ formData, setFormData ] = useReducer((formData, newItem) => { return ( {...formData, ...newItem} )}, {userName: "", password: ""})
+  const [ errorMessage, setErrorMessage ] = useState(null)
+     
+  const doLogin = async () => {
+
+    try {
+               
+      await login(formData.userName, formData.password)
+      history.push("/account")
+
+    } catch (error) {
+
+        setErrorMessage(error)
+               
+    }  
+  }
+
+  return (
+    <div className="page">
+      <h2>Login page</h2>
+      <div className="inputs">
+        <div className="input">
+          <input value={formData.userName} onChange={(e) => setFormData({userName: e.target.value}) } type="text"/>
         </div>
-      </div>
+        <div className="input">
+          <input value={formData.password} onChange={(e) => setFormData({password: e.target.value}) } type="password"/>
+        </div>
+        <div className="button">
+          <button onClick={doLogin}>Log in</button>
+        </div>
+        {errorMessage ?
+          <div className="error">{errorMessage}</div>
+          : null }
+        </div>
     </div>
-   );
+  )
 }
- 
+
 export default Login;

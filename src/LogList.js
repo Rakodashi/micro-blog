@@ -15,7 +15,7 @@ const LogList = ({ logs, title }) => {
           <Link to={`/logs/${ log.id }`}>
           <h2> {log.title} </h2>
           <h3>{t('Stardate')} {log.stardate} </h3>
-          <h3>{t('Author: ')} {log.author} </h3>
+          <h3>{t('By ')} {log.author} </h3>
           </Link>
         </div>
       ))}

@@ -28,10 +28,10 @@
 }
 .navbar a, button {
   margin: 0 0 .2rem .2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  padding: .8rem 1rem;
+  padding: .8rem .5rem;
   color: #000;
   background-color: #ffcc66;
   border: none;
@@ -75,6 +75,7 @@
   width: 5rem;
   cursor: pointer;
 }
+
 .log-list .log-title {
   background-color: #cc6699;
   overflow: hidden;
@@ -126,10 +127,6 @@
 .log-details h2 {
   font-size: 30px;
   color: #9999ff;
-  margin-bottom: 10px;
-  margin-right: auto;
-  /* overflow-y: hidden;
-  overflow-y: scroll; */
   overflow-wrap: break-word;
 }
 .log-details h3 {
@@ -143,25 +140,81 @@
   white-space: pre-line;
   overflow-wrap: break-word;
 }
+.logDetailsRow {
+  display: flex;
+  flex-flow: row;
+}
+.logDetailsCol {
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+}
+.Row {
+  display: flex;
+  flex-flow: row;
+}
+.Col {
+  display: flex;
+  flex-flow: column;
+}
 .logDetailsSpan {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  /* flex-flow: column;
+  margin: 0 auto; */
 }
 .logImg {
   background: #0f0;
   width: 10rem;
   height: 10rem;
-  --border-width: .5em;
-  --edge-size: .5em;
-
   display: inline-grid;
-  padding: 0.5em 1.5em;
   border: 0;
-  /* background: #fff; */
-  /* clip-path: ; */
-}
 
+  clip-path: polygon(
+    12% 0,
+    100% 0,
+    100% 88%,
+    88% 100%,
+    0 100%,
+    0 12%
+    );
+}
+.logImg::before,
+.logImg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.logImg::before {
+  background: #99ccff;
+  z-index: -2;
+}
+/* .logImg::after {
+  position: relative;
+  background: #373750;
+  z-index: 1;
+  clip-path: polygon(
+    12% 2%, 
+    98% 2%,
+    98% 88%,
+    88% 98%,
+    2% 98%,
+    2% 12%);
+} */
+.logImgImage {
+  position: absolute;
+  z-index: 2;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+
+  clip-path: polygon(
+    13% 2%,
+    98% 2%,
+    98% 87%,
+    87% 98%,
+    2% 98%,
+    2% 13%);
+}
 
 .create {
   max-width: 25rem;
@@ -179,17 +232,19 @@
 }
 .create span {
   display: flex;
-  /* gap: 7%; */
+  /* justify-content: space-evenly; */
+  /* margin: auto; */
+  gap: .1rem;
 }
 .create .span-adjust {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 46%;
+  /* margin: auto; */
+  width: 50%;
 }
 
 .create label {
-  text-align: left;
+  text-align: center;
   display: block;
   font-size: 20px;
   color: #99ccff;
@@ -207,6 +262,20 @@
 .create input:focus, .create textarea:focus, .create select:focus {
   border: .3rem double #ffcc66;
   outline: none;
+}
+.create .stardateInput {
+  border-radius: 20px 0 0 20px;
+  border-right: .1rem solid #99ccff;
+}
+.create select {
+  /* position: absolute; */
+  border-radius: 0 20px 20px 0;
+  border-left: .1rem solid #99ccff;
+}
+select::placeholder {
+  background-color: #fff !important;
+  columns: red !important;
+  font-size: 20rem !important;
 }
 .create textarea {
   position: relative;
@@ -273,7 +342,7 @@
 }
 .not-found p {
   color: #ff3300;
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   margin-bottom: 1.6rem;
 }
 .not-found a {
@@ -395,12 +464,25 @@
 
 @media screen and (min-width: 350px) {
   .content {
-    padding:  2rem 2rem;
+    padding:  2rem 1.5rem;
   }
   .log-list .log-title h2 {
     display: flex;
     justify-content: center;
-    margin: 0 44% 0 1.5rem;
+    margin: 0 42% 0 1.5rem;
+  }
+  .not-found p {
+    font-size: 1.7rem;
+  }
+  .log-details h2 {
+    margin: auto;
+  }
+  .logDetailsRow {
+    gap: 1rem;
+  }
+  .logDetailsSpan {
+    flex-flow: column;
+    align-items: center;
   }
 
   .create .create-title h2 {
@@ -408,6 +490,35 @@
     margin: 0 23%;
   }
 }
+
+@media screen and (min-width: 480px) {
+  .not-found p {
+    font-size: 1.8rem;
+  }
+  .log-details h2 {
+    margin-bottom: 10px;
+    margin-right: auto;
+  }
+  .log-details h3 {
+    font-size: 1.4rem;
+  }
+  .logDetailsRow {
+    display: flex;
+    flex-flow: column;
+    /* margin-right: auto; */
+    gap: .5rem;
+  }
+  .logDetailsCol {
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+  }
+  .logDetailsSpan {
+    flex-flow: row-reverse;
+    justify-content: space-around;
+  }
+}
+
 
 @media screen and (min-width: 700px) {
   .log-list .log-title h2 {

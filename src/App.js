@@ -9,6 +9,8 @@ import NotFound from './NotFound';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import Login from './login';
+import { AuthWrapper } from './auth/AuthWrapper'
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
 
@@ -22,9 +24,30 @@ function App() {
   //   setCurrentLang(newLanguage)
   // }
 
+
+
+  // <div className="card">
+    //   <div className="box">
+    //   <div className="imgBox">
+    //       <img src={image} alt="" />
+    //     </div>
+    //   </div>
+    //   <div className="box"></div>
+    //   <div className="circle">
+    //     <div className="imgBox">
+    //       <img src={image} alt="" />
+    //     </div>
+    //   </div>
+    // </div>
+
   return (
     <Router>
-          <div className="App">
+    <div className="App">
+
+      <BrowserRouter>
+        <AuthWrapper />
+      </BrowserRouter>
+
       <Navbar />
       <div className="content">
         <Switch>
