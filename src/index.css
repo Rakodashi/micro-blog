@@ -75,14 +75,38 @@
   width: 5rem;
   cursor: pointer;
 }
-
-.log-list .log-title {
+.log-title {
+  /* background-color: #cc6699; */
+  position: relative;
+  /* overflow: hidden; */
+  /* border-radius: 20px; */
+}
+.log-title h2::before {
+  display: block;
+  position: relative;
+  content: '';
+  left: 0;
+  top: 0;
   background-color: #cc6699;
-  overflow: hidden;
-  border-radius: 20px;
+  width: 8%;
+  border-radius: 20px 0 0 20px;
+  margin: 0 .3rem;
+}
+.log-title h2::after {
+  display: block;
+  position: relative;
+  content: '';
+  left: 0;
+  top: 0;
+  background-color: #cc6699;
+  width: 35%;
+  border-radius: 0 20px 20px 0;
+  margin: 0 .3rem;
 }
 .log-list .log-title h2 {
+  display: flex;
   color: #cc6699;
+  justify-content: center;
 }
 .log-preview {
   padding: 10px 16px;
@@ -165,7 +189,7 @@
 .logImg {
   background: #0f0;
   width: 10rem;
-  height: 10rem;
+  height: 14rem;
   display: inline-grid;
   border: 0;
 
@@ -204,8 +228,8 @@
   position: absolute;
   z-index: 2;
   width: 10rem;
-  height: 10rem;
-  object-fit: cover;
+  height: 14rem;
+  object-fit: fill;
 
   clip-path: polygon(
     13% 2%,
@@ -466,11 +490,6 @@ select::placeholder {
   .content {
     padding:  2rem 1.5rem;
   }
-  .log-list .log-title h2 {
-    display: flex;
-    justify-content: center;
-    margin: 0 42% 0 1.5rem;
-  }
   .not-found p {
     font-size: 1.7rem;
   }
@@ -521,9 +540,6 @@ select::placeholder {
 
 
 @media screen and (min-width: 700px) {
-  .log-list .log-title h2 {
-    margin: 0 67% 0 1.5rem;
-  }
 
   .create .create-title h2 {
     padding: 0 .2rem;

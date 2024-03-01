@@ -3,6 +3,7 @@ import useFetch from './useFetch';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { createUseStyles } from "react-jss";
 import { t } from 'i18next';
+import ImageWebp from './ImageWebp';
 // import confirm from './assets/'
 
 const LogDetails = () => {
@@ -41,6 +42,7 @@ const LogDetails = () => {
               <span className='logDetailsSpan'>
                 <div className="logImg">
                   <img className="logImgImage" src={log.url} alt={ log.title } />
+                  {/* <ImageWebp width="10rem" height="10rem" className="logImgImage" src={log.url} srcWebp={log.url} alt={ log.title }></ImageWebp> */}
                 </div>
 
                 <span className='logDetailsRow'>
