@@ -2,6 +2,7 @@ import { t } from "i18next";
 import './lib/i18n';
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import confirm from "./assets/confirm.mp3";
 
 const Create = () => {
   const [title, setTitle] = useState('');
@@ -11,6 +12,8 @@ const Create = () => {
   const [url, setUrl] = useState('');
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
+
+  const Confirm = () => new Audio(confirm).play()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,6 +30,7 @@ const Create = () => {
       setIsPending(false);
       history.push('/');
     })
+    
   }
 
   return ( 
@@ -86,7 +90,7 @@ const Create = () => {
         >
         </textarea>
 
-        { !isPending && <button>{t('CREATE')}</button> }
+        { !isPending && <button onClick={Confirm}>{t('CREATE')}</button> }
         { isPending && <button disabled>Adding Log...</button> }
       </form>
     </div>

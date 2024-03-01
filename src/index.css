@@ -212,18 +212,6 @@
   background: #99ccff;
   z-index: -2;
 }
-/* .logImg::after {
-  position: relative;
-  background: #373750;
-  z-index: 1;
-  clip-path: polygon(
-    12% 2%, 
-    98% 2%,
-    98% 88%,
-    88% 98%,
-    2% 98%,
-    2% 12%);
-} */
 .logImgImage {
   position: absolute;
   z-index: 2;
@@ -256,24 +244,22 @@
 }
 .create span {
   display: flex;
-  /* justify-content: space-evenly; */
-  /* margin: auto; */
   gap: .1rem;
 }
 .create .span-adjust {
   display: flex;
-  flex-direction: column;
-  /* margin: auto; */
+  flex-flow: column;
   width: 50%;
 }
-
+.wordBreak {
+  word-break: break-word;
+}
 .create label {
   text-align: center;
   display: block;
   font-size: 20px;
   color: #99ccff;
 }
-
 .create input, .create textarea, .create select {
   width: 100%;
   padding: .4rem 1rem;
@@ -282,19 +268,32 @@
   box-sizing: border-box;
   display: block;
   border-radius: 20px;
-}
-.create input:focus, .create textarea:focus, .create select:focus {
-  border: .3rem double #ffcc66;
-  outline: none;
+  transition: .1s ease-in-out;
 }
 .create .stardateInput {
   border-radius: 20px 0 0 20px;
   border-right: .1rem solid #99ccff;
 }
+.create .stardateInput:focus {
+  border-radius: 20px 0 0 20px;
+  border-right: .1rem solid #ffcc66;
+  transition: .1s ease-in-out;
+}
+.create select:focus{
+  border: .3rem double #ffcc66;
+  border-left: .1rem solid #ffcc66;
+  outline: none;
+  transition: .1s ease-in-out;
+}
+.create input:focus, .create textarea:focus {
+  border: .3rem double #ffcc66;
+  outline: none;
+}
 .create select {
-  /* position: absolute; */
   border-radius: 0 20px 20px 0;
   border-left: .1rem solid #99ccff;
+  color: #99ccff;
+  text-align: center;
 }
 select::placeholder {
   background-color: #fff !important;
@@ -303,35 +302,8 @@ select::placeholder {
 }
 .create textarea {
   position: relative;
-  /* width: 10%; */
   height: 25rem;
-  
-  /* clip-path: polygon(
-    0 10%,
-    10% 0,
-    90% 0,
-    100% 10%,
-    100% 90%,
-    90% 100%,
-    10% 100%,
-    0% 90%,
-    0% 10%
-  ) */
 }
-/* .create::after{
-  position: absolute;
-  content: '';
-  top: 25.5rem;
-  right: 3.5rem;
-  width: 4rem;
-  height: 4rem;
-  background-color: #000;
-  border-top: .3rem double #99ccff;
-  box-shadow: 0 -2rem #000;
-  transform: rotate(45deg);
-  overflow: hidden;
-} */
-
 .create button {
   margin: 1rem 0;
   font-size: 1.4rem;
@@ -366,7 +338,6 @@ select::placeholder {
 }
 .not-found p {
   color: #ff3300;
-  /* font-size: 1.8rem; */
   margin-bottom: 1.6rem;
 }
 .not-found a {
