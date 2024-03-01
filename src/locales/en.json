@@ -12,8 +12,8 @@
       "Stardate": "Stardate",
       "Log Body": "Log Body",
       "Log Author": "Log Author",
-      "CREATE": "CREATE",
-      "DELETE": "DELETE",
+      "Create": "Create",
+      "Delete": "Delete",
       "By ": "By ",
 
       "ERROR": "ERROR",

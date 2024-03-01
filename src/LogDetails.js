@@ -48,7 +48,7 @@ const LogDetails = () => {
 
           <div>{ log.body }</div>
 
-          <button onClick={handleClick} className='button'>{t('DELETE')}</button>
+          <button onClick={handleClick} className='button'>{t('Delete')}</button>
         </article>
       )}
     </div>

@@ -40,27 +40,30 @@ const Create = () => {
       </div>
       <form onSubmit={handleSubmit}>
         
-        <label>{t('Log Title')}</label>
+        <label htmlFor="logTitle">{t('Log Title')}</label>
         <input 
         type="text"
+        id="logTitle"
         required
         value={title}
         onChange={(e) => setTitle(e.target.value)}
          />
-        <label>{t('Log Image')}</label>
+        <label htmlFor="logImg">{t('Log Image')}</label>
         <input 
         type="text"
+        id="logImg"
         required
         value={url}
         onChange={(e) => setUrl(e.target.value)}
          />
 
         <span>
-          <span className="span-adjust">
+          <span className="span-adjust formStardate">
 
-            <label>{t('Stardate')}</label>
+            <label htmlFor="stardate">{t('Stardate')}</label>
             <input 
             type="text"
+            id="stardate"
             required
             value={stardate}
             className="stardateInput"
@@ -68,10 +71,11 @@ const Create = () => {
             />
           </span>
 
-          <span className="span-adjust">
-            <label>{t('Log Author')}</label>
+          <span className="span-adjust formAuthor">
+            <label htmlFor="author">{t('Log Author')}</label>
             <select
               value={author}
+              id="author"
               onChange={(e) => setAuthor(e.target.value)}
             >
               <option value="Adm. Picard">Adm. Picard</option>
@@ -82,15 +86,16 @@ const Create = () => {
         </span>
         
 
-        <label>{t('Log Body')}</label>
+        <label htmlFor="body">{t('Log Body')}</label>
         <textarea
         required
         value={body}
+        id="body"
         onChange={(e) => setBody(e.target.value)}
         >
         </textarea>
 
-        { !isPending && <button onClick={Confirm}>{t('CREATE')}</button> }
+        { !isPending && <button onClick={Confirm}>{t('Create')}</button> }
         { isPending && <button disabled>Adding Log...</button> }
       </form>
     </div>

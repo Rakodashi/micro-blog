@@ -9,6 +9,7 @@ import NotFound from './NotFound';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import Register from './Register';
 
 function App() {
 
@@ -53,9 +54,9 @@ function App() {
           <Route path="/logs/:id">
             <LogDetails />
           </Route>
-          {/* <Route path="/login">
-            <Login />
-          </Route> */}
+          <Route path="/register">
+            <Register />
+          </Route>
           <Route path="*">
             <NotFound />
           </Route>

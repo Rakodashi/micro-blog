@@ -20,12 +20,28 @@
   border-radius: 0 0 0 30px;
   font-size: 1.1rem;
 }
-.navbar h1 {
+.navbar .homeBtn {
   color: #ffcc66;
+  font-size: 1.65rem;
+  background-color: transparent;
+  padding: 0;
 }
+.navbar .homeBtn:hover {
+  background-color: transparent;
+  text-shadow:
+  0 0 .8em #ffefcf;
+  box-shadow: none;
+  transition:
+  text-shadow 100ms ease-in-out;
+  /* outline: none; */
+}
+
 .navbar .links {
   margin-left: auto;
 }
+/* .navbar button .homeBtn {
+  background-color: transparent;
+} */
 .navbar a, button {
   margin: 0 0 .2rem .2rem;
   font-size: 1rem;
@@ -96,7 +112,7 @@
   display: block;
   position: relative;
   content: '';
-  left: 0;
+  right: 0;
   top: 0;
   background-color: #cc6699;
   width: 35%;
@@ -233,23 +249,45 @@
   margin: 0 auto;
   text-align: center;
 }
-.create .create-title {
+/* .create-title {
   background-color: #9999ff;
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 2rem;
-}
-.create .create-title h2 {
+} */
+.create-title h2 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 2rem;
   color: #9999ff;
+  /* border: 1px solid red; */
+}
+.create-title h2::before {
+  position: relative;
+  content: '';
+  left: 0;
+  top: 0;
+  background-color: #9999ff;
+  border-radius: 20px 0 0 20px;
+}
+.create-title h2::after {
+  position: relative;
+  content: '';
+  right: 0;
+  top: 0;
+  background-color: #9999ff;
+  border-radius: 0 20px 20px 0;
 }
 .create span {
   display: flex;
-  gap: .1rem;
+  gap: 0 .1rem;
 }
 .create .span-adjust {
   display: flex;
   flex-flow: column;
   width: 50%;
+  /* position: relative; */
 }
 .wordBreak {
   word-break: break-word;
@@ -310,8 +348,9 @@ select::placeholder {
   background: #cc6699;
   border: 0;
   padding: .2rem 1rem;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
+  width: 10rem;
 }
 .create button:hover,
 .create button:focus,
@@ -457,6 +496,83 @@ select::placeholder {
   object-fit: cover;
 }
 
+#register section {
+  /* width: 100%; */
+  /* max-width: 420px; */
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* padding: 1rem; */
+  /* background-color: rgba(0,0,0,0.4); */
+}
+#register form {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+/* #register a, a:visited {
+  color: #fff;
+} */
+#register input[type="text"],
+#register input[type="password"],
+#register button,
+#register textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+#register label,
+#register button {
+  padding: 0.5rem;
+}
+#register button {
+  margin: 1rem auto .4rem auto;
+  border-radius: 30px;
+  width: 10rem;
+}
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+.hide {
+  display: none;
+}
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+.invalid  {
+  color: red;
+  margin-left: 0.25rem;
+}
+.errmsg   {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.line    {
+  display: inline-block;
+}
+
+
 @media screen and (min-width: 350px) {
   .content {
     padding:  2rem 1.5rem;
@@ -475,9 +591,13 @@ select::placeholder {
     align-items: center;
   }
 
-  .create .create-title h2 {
-    padding: 0 .2rem;
-    margin: 0 23%;
+  .create-title h2::before {
+    margin: 0 .1rem 0 0;
+    width: 21.7% !important;
+  }
+  .create-title h2::after {
+    margin: 0 0 0 .2rem;
+    width: 21.7% !important;
   }
 }
 
@@ -507,16 +627,17 @@ select::placeholder {
     flex-flow: row-reverse;
     justify-content: space-around;
   }
-}
-
-
-@media screen and (min-width: 700px) {
-
-  .create .create-title h2 {
-    padding: 0 .2rem;
-    margin: 0 26%;
+  .create-title h2::before {
+    margin: 0 .2rem 0 0;
+    width: 26% !important;
+  }
+  .create-title h2::after {
+    margin: 0 0 0 .2rem;
+    width: 26% !important;
   }
 }
+
+@media screen and (min-width: 700px) {}
 
 @media screen and (min-width: 1100px) {
   .content {

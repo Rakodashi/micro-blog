@@ -23,11 +23,10 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1>Micro Blog</h1>
+        <Link to="/" className='homeBtn' onClick={btnBeep}>Micro Blog</Link>
       <div className="links">
-        <Link to="/" onClick={btnBeep}>HOME</Link>
+        <Link to="/register" onClick={btnBeep}>{t('LOGIN')}</Link>
         <button type='button' onClick={handleChangeLanguage}>{t('TRANSLATE')}</button>
-        <Link to="/login" onClick={btnBeep}>{t('LOGIN')}</Link>
         <Link to="/create" onClick={btnBeep}>{t('NEW LOG')}</Link>
       </div>
     </nav>
