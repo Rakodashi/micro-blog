@@ -2,12 +2,15 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from './api/Axios';
+import signup from "./assets/signup.mp3";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = '/register';
 
 const Register = () => {
+  const signupBtn = () => new Audio(signup).play()
+
   const userRef = useRef();
   const errRef = useRef();
 
@@ -167,7 +170,7 @@ const Register = () => {
                 Must match the first password input field.
               </p>
 
-              <button  disabled={!validName || !validPwd || !validMatch ? true : false}>Sign up</button>
+              <button onClick={signupBtn} disabled={!validName || !validPwd || !validMatch ? true : false}>Sign up</button>
             </form>
           <p>
             Already registered?<br />

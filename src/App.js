@@ -7,9 +7,13 @@ import Create from './Create';
 import LogDetails from './LogDetails';
 import NotFound from './NotFound';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+// import { useState } from 'react';
+// import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import Register from './Register';
+// import Login from './Login';
+import Login2 from './Login2';
+// import LoginButton from './LoginButton';
+// import LogoutButton from './LogoutButton';
 
 function App() {
 
@@ -22,22 +26,6 @@ function App() {
   //   changeLanguage(newLanguage)
   //   setCurrentLang(newLanguage)
   // }
-
-
-
-  // <div className="card">
-    //   <div className="box">
-    //   <div className="imgBox">
-    //       <img src={image} alt="" />
-    //     </div>
-    //   </div>
-    //   <div className="box"></div>
-    //   <div className="circle">
-    //     <div className="imgBox">
-    //       <img src={image} alt="" />
-    //     </div>
-    //   </div>
-    // </div>
 
   return (
     <Router>
@@ -54,8 +42,8 @@ function App() {
           <Route path="/logs/:id">
             <LogDetails />
           </Route>
-          <Route path="/register">
-            <Register />
+          <Route path="/login">
+            <Login2 />
           </Route>
           <Route path="*">
             <NotFound />
