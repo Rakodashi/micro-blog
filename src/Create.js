@@ -23,7 +23,6 @@ const Create = () => {
 
     fetch('https://fake-api-neon.vercel.app/logs', {
       method: 'POST',
-      // method: 'PUT',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(log)
     }).then(() => {

@@ -7,6 +7,8 @@ import signup from "./assets/signup.mp3";
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = '/register';
+// const REGISTER_URL = 'https://fake-api-neon.vercel.app/users';
+// const REGISTER_URL = 'http://localhost:3000';
 
 const Register = () => {
   const signupBtn = () => new Audio(signup).play()
@@ -51,6 +53,9 @@ const Register = () => {
     // if button enabled with JS hack
     const v1 = USER_REGEX.test(user);
     const v2 = PWD_REGEX.test(pwd);
+
+    // const users = { user, pwd };
+
     if (!v1 || !v2) {
       setErrMsg("Invalid Entry");
       return;
@@ -65,6 +70,15 @@ const Register = () => {
           withCredentials: true
         }
       );
+
+
+    //   const response = await fetch('https://fake-api-neon.vercel.app/users', {
+    //   method: 'POST',
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({user, pwd, matchPwd})
+
+    // }).then(() => {
+      
       console.log(response?.data);
       console.log(response?.accessToken);
       console.log(JSON.stringify(response))
@@ -74,6 +88,11 @@ const Register = () => {
       setUser('');
       setPwd('');
       setMatchPwd('');
+
+
+    // })
+
+
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -101,7 +120,7 @@ const Register = () => {
             <h1>Register</h1>
             <form onSubmit={handleSubmit}>
               <label htmlFor="username">
-                Username:
+                Username
                 <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
                 <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} />
               </label>
@@ -126,7 +145,7 @@ const Register = () => {
               </p>
 
               <label htmlFor="password">
-                Password:
+                Password
                 <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
                 <FontAwesomeIcon icon={faTimes} className={validPwd || !pwd ? "hide" : "invalid"} />
               </label>
@@ -150,7 +169,7 @@ const Register = () => {
 
 
               <label htmlFor="confirm_pwd">
-                Confirm Password:
+                Confirm Password
                 <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "valid" : "hide"} />
                 <FontAwesomeIcon icon={faTimes} className={validMatch || !matchPwd ? "hide" : "invalid"} />
               </label>
@@ -176,7 +195,7 @@ const Register = () => {
             Already registered?<br />
             <span className="line">
               {/*put router link here*/}
-              <a href="#">Sign In</a>
+              <a href="/login">Sign In</a>
             </span>
           </p>
           </section>

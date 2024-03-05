@@ -34,6 +34,14 @@ const Login = () => {
           withCredentials: true
         }
       );
+
+      // const response = await fetch('https://fake-api-neon.vercel.app/users', {
+      // method: 'POST',
+      // headers: { "Content-Type": "application/json" },
+      // body: JSON.stringify({user, pwd, matchPwd})
+
+    // }).then(() => {
+
       console.log(JSON.stringify(response?.data));
       //console.log(JSON.stringify(response));
       const accessToken = response?.data?.accessToken;
@@ -42,6 +50,9 @@ const Login = () => {
       setUser('');
       setPwd('');
       setSuccess(true);
+
+      // })
+
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -71,7 +82,7 @@ const Login = () => {
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
         <h1>Sign In</h1>
         <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username:</label>
+        <label htmlFor="username">Username</label>
         <input
           type="text"
           id="username"
@@ -82,7 +93,7 @@ const Login = () => {
           required
         />
 
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           id="password"
@@ -97,7 +108,7 @@ const Login = () => {
           Need an Account?<br />
           <span className="line">
             {/*put router link here*/}
-            <a href="#">Sign Up</a>
+            <a href="/register">Sign Up</a>
           </span>
         </p>
         </section>
