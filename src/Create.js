@@ -3,6 +3,8 @@ import './lib/i18n';
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import confirm from "./assets/confirm.mp3";
+import { format } from "date-fns";
+import btn from "./assets/button.mp3";
 
 const Create = () => {
   const [title, setTitle] = useState('');
@@ -14,6 +16,7 @@ const Create = () => {
   const history = useHistory();
 
   const Confirm = () => new Audio(confirm).play()
+  const btnBeep = () => new Audio(btn).play()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +33,11 @@ const Create = () => {
       history.push('/');
     })
     
+  }
+
+  const StardateBtn = () => {
+    setStardate(format(new Date(), 'yyyyM' + '.' + 'dd'));
+    btnBeep();
   }
 
   return ( 
@@ -68,6 +76,7 @@ const Create = () => {
             className="stardateInput"
             onChange={(e) => setStardate(e.target.value)}
             />
+            <button className="stardateBtn" type="button" onClick={StardateBtn}>{t('Today')}</button>
           </span>
 
           <span className="span-adjust formAuthor">

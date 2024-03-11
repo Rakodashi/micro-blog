@@ -334,6 +334,24 @@
   border-radius: 20px 0 0 20px;
   border-right: .1rem solid #99ccff;
 }
+.create .stardateBtn {
+  background-color: #9999ff;
+  margin: .2rem auto .8rem auto;
+  width: 6rem;
+  font-size: 1.2rem;
+}
+.create .stardateBtn:hover,
+.create .stardateBtn:focus,
+.create .stardateBtn:active {
+  text-shadow:
+  0 0 .125em #7979ff,
+  0 0 .35em #b2b2ff;
+  box-shadow: inset 0 0 1em 0 #7979ff, 0 0 1em 0 #b2b2ff;
+  transition:
+  text-shadow 200ms ease-in-out,
+  box-shadow 200ms ease-in-out;
+}
+
 .create .stardateInput:focus {
   border-radius: 20px 0 0 20px;
   border-right: .1rem solid #ffcc66;
@@ -362,14 +380,14 @@
   height: 25rem;
 }
 .create button {
-  margin: 1rem 0;
-  font-size: 1.4rem;
   background: #cc6699;
-  border: 0;
+  width: 10rem;
+  margin: 1rem 0;
   padding: .2rem 1rem;
+  font-size: 1.4rem;
+  border: 0;
   border-radius: 30px;
   cursor: pointer;
-  width: 10rem;
 }
 .create button:hover,
 .create button:focus,
